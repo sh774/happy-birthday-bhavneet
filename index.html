@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy birthday, Bhavneet</title>
+  <meta name="description" content="A birthday sketchbook, made just for you.">
+  <meta property="og:title" content="Happy birthday, Bhavneet">
+  <meta property="og:description" content="Someone made you a birthday sketchbook. Open it.">
+  <meta name="theme-color" content="#E4D9F5">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23E4D9F5'/><path d='M16 4c3 5 7 9 7 14a7 7 0 0 1-14 0c0-5 4-9 7-14z' fill='%23F2A33A' stroke='%23241A33' stroke-width='2'/></svg>">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <div id="balloons" class="balloons" aria-hidden="true"></div>
+  <canvas id="fx" class="fx" aria-hidden="true"></canvas>
+
+  <!-- The sketchbook cover -->
+  <div id="intro" class="intro">
+    <button id="cover" class="cover" type="button" aria-label="Open the sketchbook">
+      <span class="cover-band" aria-hidden="true"></span>
+      <span class="cover-label">
+        <span class="cover-title">Property of <span class="js-name">Bhavneet Kaur</span></span>
+        <span class="cover-note">Private. Keep out.</span>
+        <span class="cover-note">(Except today. Today you're allowed.)</span>
+      </span>
+      <span class="cover-hint">Tap anywhere to open</span>
+    </button>
+  </div>
+
+  <main id="main">
+    <!-- Hello -->
+    <section class="hero">
+      <div class="doodles" aria-hidden="true">
+        <svg class="doodle doodle-sprig" style="--d: 900ms" viewBox="0 0 60 140">
+          <g stroke="#241A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 136C31 104 28 74 31 44" fill="none"/>
+            <path d="M30 112C20 106 13 98 11 86C21 89 28 98 30 108" fill="#8FB08A"/>
+            <path d="M31 98C40 92 46 84 48 74C39 77 33 85 31 94" fill="#8FB08A"/>
+            <g fill="#B9A3E3" stroke-width="2.5">
+              <ellipse cx="25" cy="50" rx="6" ry="8" transform="rotate(-25 25 50)"/>
+              <ellipse cx="36" cy="44" rx="6" ry="8" transform="rotate(25 36 44)"/>
+              <ellipse cx="25" cy="36" rx="5.5" ry="7.5" transform="rotate(-25 25 36)"/>
+              <ellipse cx="35" cy="29" rx="5.5" ry="7.5" transform="rotate(25 35 29)"/>
+              <ellipse cx="27" cy="20" rx="5" ry="7" transform="rotate(-20 27 20)"/>
+              <ellipse cx="33" cy="12" rx="4.5" ry="6.5" transform="rotate(20 33 12)"/>
+            </g>
+          </g>
+        </svg>
+        <svg class="doodle doodle-spark-a" style="--d: 1100ms" viewBox="0 0 40 40">
+          <path d="M20 2C22 14 26 18 38 20C26 22 22 26 20 38C18 26 14 22 2 20C14 18 18 14 20 2Z" fill="#F2A33A" stroke="#241A33" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <svg class="doodle doodle-spark-b" style="--d: 1500ms" viewBox="0 0 40 40">
+          <path d="M20 2C22 14 26 18 38 20C26 22 22 26 20 38C18 26 14 22 2 20C14 18 18 14 20 2Z" fill="#F6F1FC" stroke="#241A33" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <svg class="doodle doodle-pencil" style="--d: 1300ms" viewBox="0 0 160 40">
+          <g stroke="#241A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32 8H124V32H32Z" fill="#F2A33A"/>
+            <path d="M32 8L6 20L32 32Z" fill="#F2D9B0"/>
+            <path d="M6 20L15 15.5V24.5Z" fill="#241A33"/>
+            <path d="M124 6H136V34H124Z" fill="#C9C3D6"/>
+            <path d="M136 8H148C152 8 154 11 154 14V26C154 29 152 32 148 32H136Z" fill="#B9A3E3"/>
+          </g>
+        </svg>
+        <svg class="doodle doodle-mic" style="--d: 1700ms" viewBox="0 0 60 130">
+          <g stroke="#241A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M30 92C30 112 52 108 52 126" fill="none"/>
+            <path d="M23 46L26 94H34L37 46Z" fill="#241A33"/>
+            <rect x="14" y="4" width="32" height="44" rx="16" fill="#C9C3D6"/>
+            <path d="M18 16H42M16 26H44M18 36H42" fill="none" stroke-width="2"/>
+          </g>
+        </svg>
+      </div>
+      <h1 id="title" class="title" tabindex="-1">Happy birthday!</h1>
+      <p class="dedication reveal" style="--stagger: 1400ms">To my sibling, my homegirl, and my most dedicated part-time hater.</p>
+      <a class="scroll-cue" href="#wish">
+        Scroll down, there's food
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- Candles -->
+    <section id="wish" class="section night">
+      <div class="wrap grid wish-grid">
+        <div class="wish-copy">
+          <h2 class="heading reveal">Lights off.<br>Make a wish.</h2>
+          <p id="feast-line" class="reveal">We thought about a cake. Then we remembered who we're dealing with.</p>
+          <p id="cake-hint" class="status reveal" role="status"></p>
+          <div class="reveal">
+            <button id="mic-btn" class="btn btn-quiet" type="button"></button>
+          </div>
+        </div>
+        <div id="cake" class="feast reveal">
+          <svg class="feast-art" viewBox="0 0 400 300" role="img" aria-label="A bhatura with birthday candles in it, next to a bowl of chole">
+            <g stroke="#241A33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="200" cy="242" rx="190" ry="46" fill="#F6F1FC"/>
+              <ellipse cx="200" cy="238" rx="150" ry="30" fill="#E4D9F5" stroke-width="2.5"/>
+              <path d="M56 250C80 266 112 266 130 252" fill="none" stroke="#3E8E4E" stroke-width="9"/>
+              <path d="M130 252L141 245" fill="none" stroke="#3E8E4E" stroke-width="4"/>
+              <path d="M44 214C18 168 64 104 146 104C182 74 262 80 286 122C314 152 300 212 258 224C206 240 96 238 44 214Z" fill="#F2CF8F"/>
+              <g fill="#E0A95A" stroke="none">
+                <ellipse cx="118" cy="160" rx="15" ry="8"/>
+                <ellipse cx="196" cy="134" rx="10" ry="6"/>
+                <ellipse cx="238" cy="178" rx="16" ry="8"/>
+                <ellipse cx="88" cy="198" rx="9" ry="5"/>
+                <ellipse cx="170" cy="198" rx="8" ry="5"/>
+              </g>
+              <path d="M146 104C150 118 162 124 176 122" fill="none" stroke-width="2.5"/>
+              <path d="M258 214C258 262 290 274 316 274C342 274 374 262 374 214Z" fill="#C9C3D6"/>
+              <ellipse cx="316" cy="214" rx="58" ry="14" fill="#8A4B2A"/>
+              <g fill="#E0B66F" stroke-width="2">
+                <circle cx="294" cy="212" r="5"/>
+                <circle cx="316" cy="207" r="5"/>
+                <circle cx="336" cy="216" r="5"/>
+                <circle cx="308" cy="220" r="5"/>
+              </g>
+              <ellipse cx="348" cy="207" rx="10" ry="4" fill="none" stroke="#B57EDC"/>
+              <path d="M280 210l5-3M326 223l5-2" fill="none" stroke="#3E8E4E"/>
+              <path d="M272 234C276 250 286 260 298 264" fill="none" stroke="#F6F1FC" stroke-width="4"/>
+            </g>
+          </svg>
+          <div id="candles" class="candles"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="dundies" class="section">
+      <div class="wrap">
+        <div class="grid dundie-top">
+          <figure class="mug reveal">
+            <svg viewBox="0 0 320 330" role="img" aria-label="A mug that says World's Best Part-Time Hater">
+              <g stroke="#241A33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <g class="steam" fill="none" stroke-width="3">
+                  <path d="M110 58C98 44 122 34 110 18"/>
+                  <path d="M150 54C138 40 162 30 150 12"/>
+                  <path d="M190 58C178 44 202 34 190 18"/>
+                </g>
+                <path d="M244 120C306 120 306 236 244 236" fill="none" stroke-width="26"/>
+                <path d="M244 120C306 120 306 236 244 236" fill="none" stroke="#F6F1FC" stroke-width="18"/>
+                <path d="M44 80V282C44 302 60 314 80 314H208C228 314 244 302 244 282V80Z" fill="#F6F1FC"/>
+                <ellipse cx="144" cy="80" rx="100" ry="16" fill="#D8CAF0"/>
+                <ellipse cx="144" cy="83" rx="86" ry="10" fill="#B07A4F" stroke-width="3"/>
+                <g fill="#241A33" stroke="none" font-family="Figtree, sans-serif" font-weight="800" font-size="24" text-anchor="middle">
+                  <text x="144" y="164">WORLD'S BEST</text>
+                  <text x="144" y="200">PART-TIME</text>
+                  <text x="144" y="236">HATER</text>
+                </g>
+              </g>
+            </svg>
+          </figure>
+          <div class="dundie-intro">
+            <h2 class="heading reveal">And the Dundie goes to…</h2>
+            <p class="reveal">Every year we hold an awards night nobody asked for. There is one nominee in every category, and somehow you still act surprised.</p>
+          </div>
+        </div>
+        <ol id="awards" class="awards"></ol>
+      </div>
+    </section>
+
+    <!-- Favourite memories -->
+    <section id="memories" class="section hits-section">
+      <div class="wrap">
+        <h2 class="heading reveal">Our greatest hits</h2>
+        <p class="hits-intro reveal">A short list, heavily edited. The full version would need its own website.</p>
+        <ul id="hits" class="hits"></ul>
+      </div>
+    </section>
+
+    <!-- The note -->
+    <section class="section letter-section">
+      <div class="wrap grid">
+        <article id="card" class="letter reveal">
+          <h2 class="heading">A note, mostly sincere</h2>
+          <div class="message-box">
+            <p id="message-ghost" class="message ghost" aria-hidden="true"></p>
+            <p id="message" class="message"></p>
+          </div>
+          <p id="signature" class="signature"></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Photos (shown once you add some in script.js) -->
+    <section id="photos" class="section" hidden>
+      <div class="wrap">
+        <h2 class="heading reveal">The evidence</h2>
+        <p class="reveal photos-intro">Photographic proof that you like me. Some of the time.</p>
+        <div id="photo-grid" class="photo-grid"></div>
+      </div>
+    </section>
+
+    <!-- Drawing pad -->
+    <section id="last-page" class="section pad-section">
+      <div class="wrap grid">
+        <div class="pad-side">
+          <h2 class="heading reveal">The last page is yours</h2>
+          <p class="reveal">Draw me something. I know you've been waiting for a chance to make me look ridiculous.</p>
+          <div class="reveal">
+            <div class="swatches" role="group" aria-label="Pen colour">
+              <button class="swatch" type="button" style="--c: #241A33" data-color="#241A33" aria-label="Ink" aria-pressed="true"></button>
+              <button class="swatch" type="button" style="--c: #8E6CCB" data-color="#8E6CCB" aria-label="Lavender" aria-pressed="false"></button>
+              <button class="swatch" type="button" style="--c: #F2A33A" data-color="#F2A33A" aria-label="Marigold" aria-pressed="false"></button>
+              <button class="swatch" type="button" style="--c: #8A4B2A" data-color="#8A4B2A" aria-label="Chole brown" aria-pressed="false"></button>
+              <button class="swatch swatch-eraser" type="button" style="--c: #F6F1FC" data-color="#F6F1FC" aria-label="Eraser" aria-pressed="false"></button>
+            </div>
+            <div class="pad-actions">
+              <button id="pad-save" class="btn" type="button">Save drawing</button>
+              <button id="pad-clear" class="btn btn-quiet" type="button">Clear</button>
+            </div>
+          </div>
+        </div>
+        <div class="pad-frame reveal">
+          <canvas id="pad" width="1200" height="900" aria-label="Drawing pad"></canvas>
+          <span id="pad-prompt" class="pad-prompt" aria-hidden="true">draw here</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="closing">
+      <div class="wrap grid">
+        <p class="closing-line reveal">Okay. That's enough niceness for one year.</p>
+        <div class="closing-side reveal">
+          <button id="again-btn" class="btn" type="button">Do it all again</button>
+          <p id="credit" class="note"></p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <button id="sound-btn" class="sound-btn" type="button" aria-label="Mute music" hidden></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
